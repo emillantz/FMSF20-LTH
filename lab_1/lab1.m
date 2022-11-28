@@ -6,7 +6,7 @@ load ../data/kroppsTemp.mat
 whos T
 
 %% Calculations
-x = 37;
+x = 36;
 temps = T(:,1);
 get_ratio(x, T)
 
@@ -60,8 +60,8 @@ hold on
 plot(x, normcdf(x, mu, sigma))
 grid on
 
-normspec([-Inf 37], mu, sigma);
-norminv(0.95, mu, sigma)
+normspec([-Inf 36], mu, sigma);
+norminv(0.97, mu, sigma)
 %% Other distribution functions
 close all
 x = linspace(0,10,1000);
@@ -98,5 +98,3 @@ histogram(y, 'Normalization', 'pdf')
 figure(15)
 %plot an empirical cdf of the data in x
 stairs(sort(y),(1:length(y))/length(y))
-
-%% Mozquizto

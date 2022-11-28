@@ -1,3 +1,5 @@
+addpath('../data')
+
 n = 7;
 p = 0.75;
 U = rand(1, n);
@@ -54,8 +56,8 @@ figure(4)
 for i = 1:3
     subplot(2, 3, 3+i)
     bar(x, poisspdf(x, (i-1)*mu))
-    title('number of seeds that germinate, ' + num2str(i-1) + ' seeds planted')
-    ylabel('p(y|x=' + num2str(i-1))
+    title(['number of seeds that germinate, ', num2str(i-1), ' seeds planted'])
+    ylabel(['p(y|x=', num2str(i-1), ')'])
 end
 
 %% Poisson distribution for max(k) = 2
